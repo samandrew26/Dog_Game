@@ -35,7 +35,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             SQLiteDatabase db = this.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            values.put(IMAGES_COLUMN, @Drawable/); // inserting a string
+            values.put(IMAGES_COLUMN, info); // inserting a string
             values.put(NAME_COLUMN, otherinfo); // inserting an int
             values.put(COLUMN_ID, greatinfo); // inserting an int
 
