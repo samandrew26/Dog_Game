@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "955050087887",
+    "firebase_url": "https://doggame-851b5.firebaseio.com",
+    "project_id": "doggame-851b5",
+    "storage_bucket": "doggame-851b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955050087887:android:7bee2cf9acdb4e40e0eeba",
+        "android_client_info": {
+          "package_name": "com.example.dog_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955050087887-2cedmkaaibmneohgf8jl5grmmrqutf83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dog_game",
+            "certificate_hash": "0e998a771d755e6b001ab72e6446aadb2dd368ec"
+          }
+        },
+        {
+          "client_id": "955050087887-651479nkit4o8dopuljhgqvchm9ilsh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ3SwSmx68paLXxcfuHcZC7-llEBLp7IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955050087887-651479nkit4o8dopuljhgqvchm9ilsh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

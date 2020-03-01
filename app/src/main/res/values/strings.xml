@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Dog_Game</string>
+    <string name="identify_the_breed">Identify the Breed</string>
+    <string name="identify_the_dog">Identify the Dog</string>
+    <string name="search_dog_breeds">Search Dog Breeds</string>
+    <string name="title_activity_id_breed">id_breed</string>
+    <string name="title_activity_id_dog">id_dog</string>
+    <string name="title_activity_search_breeds">search_breeds</string>
+    <string name="imageView1"></string>
+
+    <string-array name="breeds">
+        <item>beagle</item>
+        <item>bernese mountain dog</item>
+        <item>border collie</item>
+        <item>golden retriever</item>
+        <item>leonberg</item>
+        <item>newfoundland</item>
+        <item>elkhound</item>
+        <item>pug</item>
+        <item>shetland sheepdog</item>
+        <item>siberian husky</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="apptour">
+        <item>@drawable/beagle</item>
+        <item>@drawable/bernese_mountain_dog</item>
+        <item>@drawable/border_collie</item>
+    </array>
+
+
+</resources>
