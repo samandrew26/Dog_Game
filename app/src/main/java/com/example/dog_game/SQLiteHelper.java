@@ -4,53 +4,53 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
 
-final class FeedReaderContract {
-    private FeedReaderContract() {}
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
-    /* Inner class that defines the table contents */
-    public static class FeedEntry implements BaseColumns {
-        public static final String DOG_BREEDS = "entry";    //TABLE
-        public static final String ID = "title"; //COLUMN 1
-        public static final String IMAGES = "subtitle"; //COLUMN 2
+public class SQLiteHelper extends SQLiteOpenHelper {
+
+    public static final String DATABASE_BREEDS = "dog_breeds.db";
+    static final String TABLE_BREEDS = "dogBreeds";
+    static final String NAME_COLUMN = "breeds";
+    static final String IMAGES_COLUMN = "image";
+    static final String COLUMN_ID = "id";
+    public static final int DB_VERSION = 1;
+    public SQLiteHelper(Context context) {
+        super(context, DATABASE_BREEDS, null, DB_VERSION);
     }
 
 
-    private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + FeedEntry.DOG_BREEDS + " (" +
-                    FeedEntry._ID + " INTEGER PRIMARY KEY," +
-                    FeedEntry.ID + " beagle," +
-                    FeedEntry.IMAGES + " TEXT)";
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-    private static final String SQL_DELETE_ENTRIES =
-            "DROP TABLE IF EXISTS " + FeedEntry.DOG_BREEDS;
+        String sqlBreeds = "CREATE TABLE breeds(id INTEGER PRIMARY KEY AUTOINCREMENT, breed VARCHAR, images Varchar);";
 
-}
+        sqLiteDatabase.execSQL(sqlBreeds);
 
-public class FeedReaderDbHelper extends SQLiteOpenHelper {
-    // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "FeedReader.db";
-    private static final String SQL_CREATE_ENTRIES = ;
-
-    public FeedReaderDbHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQL_CREATE_ENTRIES);
+        public void saveRecords(String info, int otherinfo, int greatinfo){
+
+            SQLiteDatabase db = this.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put(IMAGES_COLUMN, @Drawable/); // inserting a string
+            values.put(NAME_COLUMN, otherinfo); // inserting an int
+            values.put(COLUMN_ID, greatinfo); // inserting an int
+
+            // Inserting Row
+            db.insert(TABLE_BREEDS, null, values);
+            db.close(); // Closing database connection
+
+        }
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        String sqlBreeds = "DROP TABLE IF EXISTS breeds";
+
+        sqLiteDatabase.execSQL(sqlBreeds);
+
+        onCreate(sqLiteDatabase);       //https://www.youtube.com/watch?v=aukTSbD5QUs
     }
-
-    // Gets the data repository in write mode
-    SQLiteDatabase db = SQLiteDatabase.getWritableDatabase();
-
-    // Create a new map of values, where column names are the keys
-    ContentValues values = new ContentValues();
-values.put(FeedReaderContract.FeedEntry.ID, beagle);
-values.put(FeedReaderContract.FeedEntry.IMAGES, subtitle);
-
-    // Insert the new row, returning the primary key value of the new row
-    long newRowId = db.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values);
 }
 

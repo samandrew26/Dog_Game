@@ -30,19 +30,7 @@ public class id_breed extends AppCompatActivity {
     Random r;
 
 
-    Integer[] images = {
-            R.drawable.beagle,
-            R.drawable.bernese_mountain_dog,
-            R.drawable.border_collie,
-            R.drawable.elkhound,
-            R.drawable.golden_retriever,
-            R.drawable.leonberg,
-            R.drawable.newfoundland,
-            R.drawable.pug,
-            R.drawable.shetland_sheepdog,
-            R.drawable.siberian_husky
 
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,20 +60,6 @@ public class id_breed extends AppCompatActivity {
         }
 
 
-        imageView1 = (ImageView) findViewById(R.id.imageView1);
-
-
-        button_submit = (Button) findViewById(R.id.button_submit);
-
-        r = new Random();
-
-        button_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imageView1.setImageResource(images[r.nextInt(images.length)]);  // credit to https://www.youtube.com/watch?v=Pfee0wFD5M0
-
-            }
-        });
 
     }
 }
